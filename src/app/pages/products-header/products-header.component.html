@@ -1,0 +1,27 @@
+<div class="card rounded-none shadow-sm shadow-lime-600 border-2 border-bodCol p-6 bg-inherit">
+    <div class="flex justify-between">
+        <div class="flex flex-row items-center text-col2">
+            <span class="mx-3">Sort By</span>
+            <select #sorting (change)="onSortUpdated(sorting.value)" class="w-24 bg-inherit text-col2 border-2 border-bodCol focus:border-actCol outline-none">
+                <option class="text-xl hover:bg-white" value="desc">desc</option>
+                <option value="asc">asc</option>
+            </select>
+        </div>
+
+        <div class="flex flex-row items-center text-col2">
+            <span class="mx-3">Showing:</span>
+            <select #perPage (change)="onItemsUpdated(perPage.value)" class="w-20 bg-inherit text-col2 border-2 border-bodCol focus:border-actCol outline-none">
+                <option *ngFor="let num of showArray">{{ num }}</option>
+
+                <!-- <option class="text-lg hover:bg-white" [ngValue]=10>10</option>
+                <option class="text-lg hover:bg-white" [ngValue]=25>25</option>
+                <option class="text-lg hover:bg-white" [ngValue]=50>50</option>
+                <option class="text-lg hover:bg-white" [ngValue]=100>100</option> -->
+            </select>
+
+            <button (click)="onColumnsUpdated(1)" class="active:text-col"><mat-icon class="ml-3">view_list</mat-icon></button>
+            <button (click)="onColumnsUpdated(3)" class="active:text-col"><mat-icon class="mx-3">view_module</mat-icon></button>
+            <button (click)="onColumnsUpdated(4)"  class="active:text-col"><mat-icon>view_comfy</mat-icon></button>
+        </div>
+    </div>
+</div>

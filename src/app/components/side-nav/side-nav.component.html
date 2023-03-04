@@ -1,0 +1,18 @@
+<mat-expansion-panel class="text-col2 bg-inherit shadow-none" *ngIf="categories">
+    <mat-expansion-panel-header>
+        <mat-panel-title class="text-col2">
+            CATEGORIES
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-selection-list class="text-col2" #cats [multiple]="false">
+        <ul *ngFor="let category of categories">
+            <li (click)="onShowCategory(category)" class="text-col2">
+                <label class="label cursor-pointer">
+                    <span class="label-text text-lg text-col2">{{ category }}</span> 
+                    <input type="radio" name="radio-10" class="radio-sm checked:bg-black text-col2 focus:ring-bodCol" />
+                </label>
+            </li>
+        </ul>
+    </mat-selection-list>
+      
+</mat-expansion-panel>

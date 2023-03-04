@@ -1,0 +1,23 @@
+<mat-card [ngClass]="{'text-center': !fullWidthMode}" class="mt-8">
+    <div>
+        <img [ngClass]="{'h-200px': !fullWidthMode, 'h-[360px]': fullWidthMode}" class="mb-1 mx-auto h-[200px]" src="https://via.placeholder.com/150" alt="">
+    </div>
+    <div class="w-full">
+        <div>
+            <h5>Shoes</h5>
+            <p class="truncate hover:whitespace-normal">Snickers</p>
+            <p class="truncate hover:whitespace-normal">Description</p>
+        </div>
+        <div class="flex justify-between">
+            <span class="text-red-400">
+                {{ '150' | currency: 'KES ' }}
+            </span>
+
+            <button>
+                <mat-icon>
+                    shopping_cart
+                </mat-icon>
+            </button>
+        </div>
+    </div>
+</mat-card>

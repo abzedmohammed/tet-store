@@ -1,0 +1,56 @@
+<mat-toolbar class="max-w-7xl bg-inherit mx-auto text-textCol2 justify-between items-center">
+    <a class="text-4xl text-col2 font-extrabold border-b-4 border-bodCol"routingLink="/">
+        TET' <span class="italic text-6xl">S</span>tore
+    </a>
+
+    <div class="dropdown dropdown-left dropdown-bottom">
+        <label tabindex="0" class="btn m-1 rounded-full bg-bodCol hover:bg-hovCol">
+            <mat-icon [matBadge]="2" matBadgeSize="medium" class="text-3xl bg-inherit text-col">
+                shopping_cart
+            </mat-icon>
+        </label>
+        <ul tabindex="0" class="dropdown-content text-col2 border-2 border-bodCol menu p-2 bg-inherit w-60 text-base">
+            <div class="flex justify-between items-center flex-row border-b-2 border-bodCol p-2">
+                <span>Items 3</span>
+                <a class="btn btn-sm bg-btnCol text-col hover:bg-hovCol active:bg-actCol" routingLink="/cart">View Cart</a>
+            </div>
+          <li class="active:bg-actCol hover:bg-hovCol hover:text-col">
+            <div class="flex flex-row justify-between items-center bg-inherit">
+                <a class="bg-inherit">Item 1</a>
+                <a class="bg-inherit">{{ '3000' | currency:'KES ' }}</a>
+                <mat-icon  matBadgeSize="medium" class="bg-inherit hover:text-red-600">
+                    delete
+                </mat-icon>
+            </div>
+        </li>
+
+        <li class="active:bg-actCol hover:bg-hovCol hover:text-col">
+            <div class="flex flex-row justify-between items-center bg-inherit">
+                <a class="bg-inherit">Item 1</a>
+                <a class="bg-inherit">{{ '3000' | currency:'KES ' }}</a>
+            </div>
+        </li>
+
+        <li class="active:bg-actCol hover:bg-hovCol hover:text-col">
+            <div class="flex flex-row justify-between items-center bg-inherit">
+                <a class="bg-inherit">Item 1</a>
+                <a class="bg-inherit">{{ '3000' | currency:'KES ' }}</a>
+            </div>
+        </li>
+
+        <div class="flex flex-row justify-end items-center mr-5 mb-3">
+            <a class="hover:text-hovCol active:text-actCol" routerLink="/cart">
+                <span class="text-4xl">...</span>
+            </a>
+        </div>
+
+        <hr>
+        <div class="flex flex-row justify-between items-center mb-3 p-2">
+            <span>Total</span>
+            <a class="bg-inherit font-bold">{{ '3000' | currency:'KES ' }}</a>
+        </div>
+
+        </ul>
+      </div>
+    
+</mat-toolbar>
