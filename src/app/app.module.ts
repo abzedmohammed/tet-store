@@ -30,6 +30,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProductsHeaderComponent } from './pages/products-header/products-header.component';
 import { ProductBoxComponent } from './pages/product-box/product-box.component';
+import { CartComponent } from './pages/cart/cart.component';
+import { CartService } from './services/cart.service';
 
 
 @NgModule({
@@ -39,7 +41,8 @@ import { ProductBoxComponent } from './pages/product-box/product-box.component';
     HeaderComponent,
     HomeComponent,
     ProductsHeaderComponent,
-    ProductBoxComponent
+    ProductBoxComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +67,9 @@ import { ProductBoxComponent } from './pages/product-box/product-box.component';
     MatSnackBarModule,
     MatToolbarModule,
   ],
-  providers: [],
+  providers: [
+    CartService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
